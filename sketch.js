@@ -64,7 +64,7 @@ function setup()
   if (isMobile){
     canW = displayWidth;
     canH = displayHeight;
-    createCanvas(displayWidth, displayHeight);
+    createCanvas(displayWidth +80, displayHeight);
   }
   else{
     canW = windowWidth;
@@ -111,7 +111,7 @@ function setup()
   blink.frameDelay = 20;
   eat.frameDelay = 20;
 
-  bunny = createSprite(170,canH,100,100);
+  bunny = createSprite(170,canH -80,100,100);
   bunny.scale = 0.2;
 
   bunny.addAnimation('blinking',blink);
@@ -135,7 +135,7 @@ function setup()
 function draw() 
 {
   background(51);
-  image(bg_img,0,0, displayWidth, displayHeight);
+  image(bg_img,0,0, displayWidth +80, displayHeight);
 
   push();
   imageMode(CENTER);
